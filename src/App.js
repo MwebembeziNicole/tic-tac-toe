@@ -8,7 +8,7 @@ function Square({value}){
 
   function handlleButtonClick(){
     setName('X');
-    console.log('click action', name);
+    console.log('Click action', name);
   }
 
    
