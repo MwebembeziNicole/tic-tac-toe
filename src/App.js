@@ -1,23 +1,45 @@
-import logo from './logo.svg';
+import {useState} from 'react';
 import './App.css';
+
+//COMPONENT(All the functionalities below can be reused in the component)
+function Square({value}){
+  const [name, setName] = useState(null);
+
+
+  function handlleButtonClick(){
+    setName('X');
+    console.log('click action', name);
+  }
+
+   
+  return (
+  <button onClick = {handlleButtonClick} className = 'square'>{name}</button>
+  );
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    
+    <div className="board">
+      <h1><strong>TIC TAC TOE</strong></h1>
+      <div className = 'board-row'>
+        <Square value='1'/>
+        <Square value ='2' />
+        <Square value='3'/>
+      </div>
+
+      <div className = 'board-row'>
+        <Square/>
+        <Square/>
+        <Square/>
+      </div>
+      
+      <div className = 'board-row'>
+        <Square/>
+        <Square/>
+        <Square/>
+      </div>
+
     </div>
   );
 }
