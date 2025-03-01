@@ -23,9 +23,9 @@ function App() {
     <div className="board">
       <h1><strong>TIC TAC TOE</strong></h1>
       <div className = 'board-row'>
-        <Square value='1'/>
-        <Square value ='2' />
-        <Square value='3'/>
+        <Square />
+        <Square  />
+        <Square />
       </div>
 
       <div className = 'board-row'>
